@@ -16,14 +16,10 @@ namespace SeleniumWithCsharp.Pages
         IWebElement HamburgerButton => driver.FindElement(By.Id("react-burger-menu-btn"));
         IWebElement LoginOffBtn => driver.FindElement(By.Id("logout_sidebar_link"));
 
-
-        // //*[@id="add-to-cart-sauce-labs-backpack"]
-        // //*[@id="add-to-cart-sauce-labs-fleece-jacket"]
         //Page specific methods
-        //*[@id="logout_sidebar_link"]
         public bool IsOnPage()
         {
-            Wait(ShoppingCart);
+            Wait(ShoppingCart, 5);
             return ShoppingCart.Displayed && HamburgerButton.Displayed;
         }
         public void Logoff()

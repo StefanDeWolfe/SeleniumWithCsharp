@@ -23,8 +23,8 @@ namespace SeleniumWithCsharp.Tests
         [TearDown]
         public void Teardown()
         {
-            //driver.Dispose();
-            //driver.Quit();
+            driver.Dispose();
+            driver.Quit();
         }
     }
 }
